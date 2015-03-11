@@ -1,0 +1,10 @@
+O tema escolhido para o trabalho prático é uma representação/organização possível de um clube desportivo.
+
+Este clube desportivo terá várias entidades tais como: atletas, sócios e funcionários (treinadores, gestores financeiros, de limpeza, etc.). Também terá à sua disposição recintos de vários tipos tais como: campos, pavilhões e ginásios.
+
+Associações possíveis entre as várias entidades e recintos são: contratos de sócios, jogadores e funcionários, modalidades, treinos e calendários variados como de limpeza/manutenção, treinos e jogos.
+
+Constituição do grupo 110:
+João Gabriel Marques Costa - 201304197
+João Carlos Eusébio Almeida - 201306301
+Nuno Martins Marques Pinto - 201307878
