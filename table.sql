@@ -3,29 +3,22 @@ idPessoa		INTEGER,
 nome 			CHAR(20),
 idade			INTEGER,
 NIF 				INTEGER,
-Morada			CHAR(20),
+Morada		CHAR(20),
 
 PRIMARY KEY (idPessoa)
 );
 
-CREATE TABLE IF NOT EXISTS Funcionario(
-idFuncionario		INTEGER,
-salario				INTEGER,
-
-PRIMARY KEY (idFuncionario)
-);
-
 CREATE TABLE IF NOT EXISTS Atleta(
-idAtleta			INTEGER,
+idPessoa			INTEGER,
 professional	CHAR(20), ------if(true) é renumerado
 
-PRIMARY KEY (idAtleta)
+PRIMARY KEY (idPessoa)
 );
 
 CREATE TABLE IF NOT EXISTS Socio(
-idSocio		INTEGER,	
+idPessoa		INTEGER,	
 
-PRIMARY KEY (idSocio)
+PRIMARY KEY (idPessoa)
 );
 
 CREATE TABLE IF NOT EXISTS ContratoDeSocio(
@@ -36,15 +29,17 @@ PRIMARY KEY (idContratoDeSocio)
 );
 
 CREATE TABLE IF NOT EXISTS Treinador(
-idTreinador	INTEGER,
+idPessoa	INTEGER,
+salario			INTEGER,
 
-PRIMARY KEY (idTreinador)
+PRIMARY KEY (idPessoa)
 );
 
 CREATE TABLE IF NOT EXISTS FuncionarioDeSaude(
-idFuncionarioDeSaude		INTEGER,
+idPessoa		INTEGER,
+salario			INTEGER,
 
-PRIMARY KEY (idFuncionarioDeSaude)
+PRIMARY KEY (idPessoa)
 );
 
 
@@ -56,37 +51,24 @@ PRIMARY KEY (idEspecializacao)
 );
 
 CREATE TABLE IF NOT EXISTS FuncionarioDeLimpeza(
-idFuncionarioDeLimpeza	INTEGER,
+idPessoa	INTEGER,
+salario		INTEGER,
 
-PRIMARY KEY (idFuncionarioDeLimpeza)
+PRIMARY KEY (idPessoa)
 );
 
 CREATE TABLE IF NOT EXISTS CalendarioDeLimpeza(
-idCalendarioDeLimpeza 	INTEGER,
+--idCalendarioDeLimpeza 	INTEGER,
+DataDeLimpeza					INTEGER,
+hora										INTEGER,
 	
-PRIMARY KEY (idEspecialidade)
+--PRIMARY KEY (idEspecialidade)
 );	
 
-CREATE TABLE IF NOT EXISTS DataTrabalho(
---idDataTrabalho		INTEGER,							
-dia						INTEGER,
-hora						INTEGER,
-
-PRIMARY KEY (idDataTrabalho)
-);
-
-CREATE TABLE IF NOT EXISTS DataFerias(
---idDataFerias			INTEGER,							
-dia						INTEGER,
-hora						INTEGER,
-
-PRIMARY KEY (idDataFerias)
-);
-
 CREATE TABLE IF NOT EXISTS GestorFinanceiro(
-idGestorFinanceiro		INTEGER,
+idPessoa		INTEGER,
 
-PRIMARY KEY (idGestorFinanceiro)
+PRIMARY KEY (idPessoa)
 );
 
 CREATE TABLE IF NOT EXISTS ComplexoDesportivo(
@@ -111,29 +93,6 @@ idTreino		INTEGER,
 PRIMARY KEY (idTreino)
 );
 
-CREATE TABLE IF NOT EXISTS CalendarioDeTreino(
-idCalendarioDeTreino	INTEGER,							
-
-PRIMARY KEY (idCalendarioDeTreino)
-);
-
-CREATE TABLE IF NOT EXISTS DataDeTreino(
---dDataDeTreino		INTEGER,							
-dia						INTEGER,
-hora						INTEGER,
-
-PRIMARY KEY (idDataDeTreino)
-);
-
-CREATE TABLE IF NOT EXISTS DataDeDescanso(
---idDataDeDescanso		INTEGER,							
-dia								INTEGER,
-hora								INTEGER,
-
-PRIMARY KEY (idDataDeDescanso)
-);
-
-
 CREATE TABLE IF NOT EXISTS Equipa(
 idEquipa				INTEGER,							
 nome					CHAR(20),
@@ -148,11 +107,3 @@ publico					CHAR(20),
 PRIMARY KEY (idJogo)
 );
 
------problema ao ter so Data ---------------
-CREATE TABLE IF NOT EXISTS DataJogo(
-idData					INTEGER,							
-dia						INTEGER,
-hora						INTEGER,
-
-PRIMARY KEY (idData)
-);
