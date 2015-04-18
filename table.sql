@@ -103,6 +103,8 @@ PRIMARY KEY (idEquipa)
 CREATE TABLE IF NOT EXISTS Jogo(
 idJogo					INTEGER,							
 publico					CHAR(20),
+DataJogo				INTEGER,
+hora						INTEGER,
 
 PRIMARY KEY (idJogo)
 );
