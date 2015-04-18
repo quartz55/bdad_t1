@@ -88,7 +88,9 @@ PRIMARY KEY (idModalidade)
 
 
 CREATE TABLE IF NOT EXISTS Treino(
-idTreino		INTEGER,	
+idTreino		INTEGER,
+DataTreino	INTEGER,
+hora				INTEGER,	
 
 PRIMARY KEY (idTreino)
 );
